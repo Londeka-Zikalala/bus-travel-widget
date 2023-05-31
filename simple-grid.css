@@ -56,7 +56,6 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
-  color: darkolivegreen;
 }
 
 .font-light {
@@ -97,6 +96,7 @@ p {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgb(52, 52, 94);
 }
 
 .row {

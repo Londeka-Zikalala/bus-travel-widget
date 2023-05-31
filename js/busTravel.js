@@ -8,9 +8,7 @@ create a function to pick a return trip
 create a function to get the number of return trips
 create a function to get the number of single trips
 create a function to get the cost when there are points available
-create a function to calculte the travel cost
-create a function to get the travel cost 
-create a function to get the total cost
+create a function to calculte the travel cost per trip
 
  */
 
