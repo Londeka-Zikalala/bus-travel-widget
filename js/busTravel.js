@@ -5,8 +5,12 @@ create an instance busTravel() with:
 create a function to set points, 
 create a function to set a travel location
 create a function to pick a return trip 
+create a function to get the number of return trips
+create a function to get the number of single trips
+create a function to get the cost when there are points available
 create a function to calculte the travel cost
 create a function to get the travel cost 
+create a function to get the total cost
 
  */
 
@@ -62,6 +66,8 @@ function busTravel() {
     function getCostWithPoints() {
       var pointsCost = points*conversion;
       var totalCost = costPerTrip - pointsCost;
+      totalCost* numberOfReturnTrips;
+      totalCost* numberOfSingleTrips;
   
       return totalCost;
     }
@@ -80,10 +86,13 @@ function busTravel() {
       if (returnTrip) {
         costPerTrip *= 2;
       }
-  
+      costPerTrip* numberOfReturnTrips;
+      costPerTrip*numberOfSingleTrips;
+
       return costPerTrip;
     }
-  
+
+    
     return {
       setPoints,
       setLocation,
@@ -93,6 +102,7 @@ function busTravel() {
       getCostWithPoints,
       getNumberOfSingleTrips,
       getNumberOfReturnTrips,
+
     };
   }
   

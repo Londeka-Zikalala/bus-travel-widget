@@ -22,7 +22,7 @@ body {
 
 * {
   font-family: 'Lato', Helvetica, sans-serif;
-  color: darkgray;
+  color: orangered;
   line-height: 1.5;
 }
 
@@ -56,6 +56,7 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+  color: darkolivegreen;
 }
 
 .font-light {

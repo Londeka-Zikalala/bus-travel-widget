@@ -113,5 +113,6 @@ it('Should display the Number of Return Trips', function(){
     assert.equal(1, travelWidget.getNumberOfReturnTrips())
 
 })
+
 })
 

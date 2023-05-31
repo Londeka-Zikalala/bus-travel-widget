@@ -24,7 +24,7 @@ function busTravelDom() {
     if (returnTripElem.checked) {
         travel.setReturnTrip();
         singleTripsElem.innerHTML = '';
-        pricePerTripElem.innerHTML = travel.getCostPerTrip();
+        pricePerTripElem.innerHTML = '';
         numberOfReturnTripsElem.innerHTML = travel.getNumberOfReturnTrips();
         pricePerReturnTripElem.innerHTML = travel.getCostPerTrip();
   } else {
