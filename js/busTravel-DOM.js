@@ -15,6 +15,24 @@ const travel = busTravel();
 
 //DOM code
 function busTravelDom(){
+travel.setPoints(Number(pointsElem.value))
+travel.setLocation(travelLocationElem.value)
+travel.setTime(travelTimeElem.value)
+
+
+if (returnTripElem.checked) {
+    travel.setReturnTrip();
+    singleTripsElem.innerHTML = '';
+    pricePerTripElem.innerHTML = travel.getCostPerTrip();
+    numberOfReturnTripsElem.innerHTML = ''; 
+    pricePerReturnTripElem.innerHTML = travel.getReturnTripCost();
+  } else if (pointsElem.value > 0) {
+    singleTripsElem.innerHTML = '';
+    pricePerTripElem.innerHTML = travel.getCostWithPoints();
+    numberOfReturnTripsElem.innerHTML = '';
+    pricePerReturnTripElem.innerHTML = travel.getReturnTripCost();
+  }
+
 
 }
 

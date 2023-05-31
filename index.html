@@ -4,39 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="bus-travel.css"> 
+<link rel="stylesheet" href="simple-grid.css">
 <title>bus-travel-widget</title>
 </head>
 <body>
   <div class="container">
-    <h1>Bus Travel Widget</h1>
-    <div class="input-section">
-      <label for="points">Points:</label>
-      <input type="number" class="points" placeholder="Enter points">
-      <label for="travel-location">Travel Location:</label>
-      <select id="travel">
-        <option value="" class="travel-location">location</option>
-        <option value="Khayelitsha" class="travel-location" >Khayelitsha</option>
-        <option value="Dunoon" class="travel-location">Dunoon</option>
-        <option value="Mitchells Plain" class="travel-location">Mitchells Plain</option>
-      </select>
+    <h1><img src="icons/bus-icon-design-template-free-vector.jpg" width="50px"><h1> Bus Travel Widget</h1>
+    <div class="row">
+      <div class="col-6">
+        <label for="points"><h3>Points</h3></label>
+        <input type="number" id="points" class="points" placeholder="Enter points">
+      </div>
+      <div class="col-6">
+        <label for="return-trip" class="right">Return Trip:</label>
+        <input type="checkbox" class="checkbox" id="return-trip">
+      </div>
     </div>
-    <div class="">
-      <label>Travel Times:</label>
-      <input type="radio" id="peak" name="travel-time" class="travel-times" value="peak">
-      <label for="peak">Peak</label>
-      <input type="radio" id="offpeak" name="travel-time" class="travel-times" value="offpeak">
-      <label for="offpeak">Off-peak</label>
-      <div class="">
-      <label for="return-trip">Return Trip:</label>
-      <input type="checkbox" class="checkbox" id="return-trip">
+    <div class="row">
+      <div class="col-6">
+        <label for="travel-location"><h3>Travel Location:</h3></label>
+        <select id="travel" class="travel-location">
+          <option value="">location</option>
+          <option value="Khayelitsha">Khayelitsha</option>
+          <option value="Dunoon">Dunoon</option>
+          <option value="Mitchells Plain">Mitchells Plain</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label>Travel Times:</label>
+        <div>
+          <input type="radio" id="peak" name="travel-time" class="travel-times" value="peak">
+          <label for="peak">Peak</label>
+        </div>
+        <div>
+          <input type="radio" id="offpeak" name="travel-time" class="travel-times" value="offpeak">
+          <label for="offpeak">Off-peak</label>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="calculate-btn">Calculate</button>
+      </div>
+      <div class="col-6">
+        <div class="calculation-p">
+          <img src="icons/475497.png" width="40px"> <p>Calculations</p> 
+        </div>
+      </div>
     </div>
-    <div class="calculate-section">
-      <button class="calculate-btn">Calculate</button>
-      <div class="display">
+    <div class="row display">
+      <div class="col-12">
         <p>Number of Single Trips: 0<span class="single-trip"></span></p>
+      </div>
+      <div class="col-12">
         <p>Price per Trip: 0 <span class="price-per-trip"></span></p>
+      </div>
+      <div class="col-12">
         <p>Number of Return Trips: 0<span class="return-trip"></span></p>
+      </div>
+      <div class="col-12">
         <p>Price per Trip (Return): 0 <span class="price-per-return"></span></p>
       </div>
     </div>
