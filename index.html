@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bus-travel.css"> 
+<title>bus-travel-widget</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Bus Travel Widget</h1>
+    <div class="input-section">
+      <label for="points">Points:</label>
+      <input type="number" class="points" placeholder="Enter points">
+      <label for="travel-location">Travel Location:</label>
+      <select id="travel">
+        <option value="" class="travel-location">location</option>
+        <option value="Khayelitsha" class="travel-location" >Khayelitsha</option>
+        <option value="Dunoon" class="travel-location">Dunoon</option>
+        <option value="Mitchells Plain" class="travel-location">Mitchells Plain</option>
+      </select>
+    </div>
+    <div class="">
+      <label>Travel Times:</label>
+      <input type="radio" id="peak" name="travel-time" class="travel-times" value="peak">
+      <label for="peak">Peak</label>
+      <input type="radio" id="offpeak" name="travel-time" class="travel-times" value="offpeak">
+      <label for="offpeak">Off-peak</label>
+      <div class="">
+      <label for="return-trip">Return Trip:</label>
+      <input type="checkbox" class="checkbox" id="return-trip">
+    </div>
+    </div>
+    <div class="calculate-section">
+      <button class="calculate-btn">Calculate</button>
+      <div class="display">
+        <p>Number of Single Trips: 0<span class="single-trip"></span></p>
+        <p>Price per Trip: 0 <span class="price-per-trip"></span></p>
+        <p>Number of Return Trips: 0<span class="return-trip"></span></p>
+        <p>Price per Trip (Return): 0 <span class="price-per-return"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/busTravel.js" charset="utf-8"></script>
+  <script src="js/busTravel-DOM.js" charset="utf-8"></script>
+</body>
+</html>
