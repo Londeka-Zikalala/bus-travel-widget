@@ -1,12 +1,21 @@
 
+body{
+    width:100% ;
+    padding: 10px;
+    margin:auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
 .container {
-
+   
+    margin:auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(46, 46, 104);
   }
-  .calculations{
-    border: solid 2 px red;
-    background-color: rgb(52, 52, 94);
-  }
+  
   .section {
     margin-bottom: 20px;
   }
@@ -44,4 +53,5 @@
     background-color: #4CAF50;
     color: white;
     border: none;
+    cursor: pointer;
   }

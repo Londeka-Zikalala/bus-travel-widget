@@ -5,12 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="bus-travel.css"> 
 <link rel="stylesheet" href="simple-grid.css">
-<script src="./js/busTravel.js" charset="utf-8" defer></script>
-<script src="./js/busTravel-DOM.js" charset="utf-8" defer></script>
 <title>bus-travel-widget</title>
 </head>
 <body>
-  <div class="container center">
+  <div class="container">
     <h1><img src="icons/bus-icon-design-template-free-vector.jpg" width="50px"><h1> Bus Travel Widget</h1>
     <div class="row">
       <div class="col-6">
@@ -44,32 +42,32 @@
         </div>
       </div>
     </div>
-    <div class="row center">
-      <div class="col-12">
+    <div class="row">
+      <div class="col-6">
         <button class="calculate-btn">Calculate</button>
       </div>
-      <div class="row display">
-      <div class="col-12">
+      <div class="col-6">
         <div class="calculation-p">
-          <img src="icons/475497.png" width="40px"><h4>Calculated Results:</h4>   
+          <img src="icons/475497.png" width="40px"> <p>Calculations</p> 
         </div>
       </div>
-      <div class="calculations">
-      <div class="col-12">
-        <p>Number of Single Trips: R<span class="single-trip">0.00</span></p>
-      </div>
-      <div class="col-12">
-        <p>Price per Trip: R<span class="price-per-trip">0.00</span></p>
-      </div>
-      <div class="col-12">
-        <p>Number of Return Trips:  R<span class="return-trip">0.00</span></p>
-      </div>
-      <div class="col-12">
-        <p>Price per Trip (Return):   R<span class="price-per-return">0.00</span></p>
-      </div>
     </div>
+    <div class="row display">
+      <div class="col-12">
+        <p>Number of Single Trips: <span class="single-trip"></span></p>
+      </div>
+      <div class="col-12">
+        <p>Price per Trip:  <span class="price-per-trip"></span></p>
+      </div>
+      <div class="col-12">
+        <p>Number of Return Trips:  <span class="return-trip"></span></p>
+      </div>
+      <div class="col-12">
+        <p>Price per Trip (Return):   <span class="price-per-return"></span></p>
+      </div>
     </div>
   </div>
-
+  <script src="js/busTravel.js" charset="utf-8"></script>
+  <script src="js/busTravel-DOM.js" charset="utf-8"></script>
 </body>
 </html>
