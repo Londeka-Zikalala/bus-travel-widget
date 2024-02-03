@@ -8,7 +8,7 @@
 <title>bus-travel-widget</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container center">
     <h1><img src="icons/bus-icon-design-template-free-vector.jpg" width="50px"><h1> Bus Travel Widget</h1>
     <div class="row">
       <div class="col-6">
@@ -43,29 +43,36 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6">
-        <button class="calculate-btn">Calculate</button>
-      </div>
-      <div class="col-6">
-        <div class="calculation-p">
-          <img src="icons/475497.png" width="40px"> <p>Calculations</p> 
-        </div>
+      <div class="col-12">
+        <h6 class="error"></h6>
+        <button class="calculate-btn center">Calculate</button>
       </div>
     </div>
-    <div class="row display">
+    <div class="row display ">
+      <div class="col-12">
+        <div class="calculation-p">
+          <img src="icons/475497.png" width="25px" height="100px"> <h2>Calculated Results</h2> 
+        </div>
       <div class="col-12">
         <p>Number of Single Trips: <span class="single-trip"></span></p>
       </div>
       <div class="col-12">
-        <p>Price per Trip:  <span class="price-per-trip"></span></p>
+        <p>Total (Single):   R<span class="single-total">0.00</span></p>
+      </div>
+      <div class="col-12">
+        <p>Cost  <span class="price-per-trip"></span></p>
       </div>
       <div class="col-12">
         <p>Number of Return Trips:  <span class="return-trip"></span></p>
       </div>
       <div class="col-12">
-        <p>Price per Trip (Return):   <span class="price-per-return"></span></p>
+        <p>Total (Return):  R<span class="return-total">0.00</span></p>
+      </div>
+      <div class="col-12">
+        <p>Return Cost  <span class="price-per-return"></span></p>
       </div>
     </div>
+    <button class="reset">Reset</button>
   </div>
   <script src="js/busTravel.js" charset="utf-8"></script>
   <script src="js/busTravel-DOM.js" charset="utf-8"></script>

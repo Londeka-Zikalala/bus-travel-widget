@@ -1,7 +1,7 @@
 /*
 create an instance busTravel() with: 
 
-*Create global variables : travel location and cost object; 
+*Create global variables : travelCosts object, travelTime,startLocation,points, etc; 
 create a function to set points, 
 create a function to set a travel location
 create a function to pick a return trip 
@@ -25,36 +25,51 @@ function busTravel() {
     var returnTrip = false;
     var numberOfSingleTrips = 0;
     var numberOfReturnTrips = 0;
-    var conversion = 1;
+  var conversion = 1;
+  var singleTotal = 0;
+  var returnTotal = 0;
+
   
-    function setPoints(num) {
+  function setPoints(num) {
+      //take in the input for points and assign a value
       points = num;
       return points;
     }
   
-    function setLocation(location) {
+  function setLocation(location) {
+      //take the input for selected location
       startLocation = location;
       return startLocation;
     }
   
-    function setTime(time) {
+  function setTime(time) {
+      //take the input selection for travel time
       travelTime = time;
+  
       return travelTime;
     }
   
-    function setReturnTrip() {
+  function setReturnTrip()
+  {
+    //set selection for trip type
       returnTrip = true;
       return returnTrip;
     }
-  
-    function getNumberOfSingleTrips() {
+    function unsetReturnTrip() {
+      // unset selection for trip type
+      returnTrip = false;
+      return returnTrip;
+  }
+  function getNumberOfSingleTrips() {
+      //increment the value if return is not checked
       if (!returnTrip) {
         numberOfSingleTrips++;
       }
       return numberOfSingleTrips;
     }
   
-    function getNumberOfReturnTrips() {
+  function getNumberOfReturnTrips() {
+      //if return is checked, increment value
       if (returnTrip) {
         numberOfReturnTrips++;
       }
@@ -63,11 +78,8 @@ function busTravel() {
   
     function getCostWithPoints() {
       var pointsCost = points*conversion;
-      var totalCost = costPerTrip - pointsCost;
-      totalCost* numberOfReturnTrips;
-      totalCost* numberOfSingleTrips;
-  
-      return totalCost;
+      var cost = costPerTrip - pointsCost;
+      return cost;
     }
   
     function getCostPerTrip() {
@@ -81,25 +93,66 @@ function busTravel() {
         costPerTrip = getCostWithPoints();
       }
   
+      if (!returnTrip) {
+        costPerTrip *= 1;
+        singleTotal += costPerTrip;
+        
+      }
       if (returnTrip) {
         costPerTrip *= 2;
-      }
-      costPerTrip* numberOfReturnTrips;
-      costPerTrip*numberOfSingleTrips;
+        returnTotal += costPerTrip
+      } 
 
       return costPerTrip;
+  }
+  
+  function getTownName(townName) {
+    let town;
+    if (townName === "Khayelitsha") {
+        town = "Khayelitsha"
+    } else if(townName === "Dunoon"){
+        town = "Dunoon"
+      } else if(townName === "Mitchells Plain"){
+        town = "Mitchells Plain"
+    } return town
     }
-
     
+  function getSingleTripsTotal() { 
+      return singleTotal
+  }
+  
+  function getReturnTripsTotal() {
+    return returnTotal
+  }
+  
+  function errorHandling(travelTime, startLocation) {
+    if (!travelTime && !startLocation) {
+      return "Please Pick a Travel Time And Select A Location"
+    }
+    else if(!travelTime) {
+      return "Please Pick A Travel Time";
+    }
+    else if(!startLocation) {
+      return "Please Select A Location";
+    }
+  
+    return null; 
+  }
+  
     return {
       setPoints,
       setLocation,
       setTime,
       setReturnTrip,
+      unsetReturnTrip,
       getCostPerTrip,
       getCostWithPoints,
       getNumberOfSingleTrips,
       getNumberOfReturnTrips,
+      getTownName,
+      getSingleTripsTotal,
+      getReturnTripsTotal,
+      errorHandling
 
     };
   }
